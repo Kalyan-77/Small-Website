@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <script>
+        function handleSubmit() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+             
+            if(username!=="kalyan"){
+                alert("Enter correct username"); 
+                return true;
+            }
+            if(password!=="kalyan@123"){
+                alert("Enter correct password");
+                return true;
+            }
+            // Redirecting to another page
+            window.location.href = "https://kalyan-77.github.io/Rainwater-Harvesting?username=" + username + "&password=" + password;
+        }
+    </script>
+    <style>
+        fieldset{
+            width: 300px;
+            height: 300px;
+            margin-left: 550px;
+            margin-top: 150px;
+            border-color: black;
+        }
+        input{
+            font-size: 25px;
+        }
+        h2{
+            font-size: 30px;
+            text-align: center;
+        }
+        body{
+                background-image: URL("https://nypost.com/wp-content/uploads/sites/2/2019/02/020419-oceans-turning-color.jpg?quality=75&strip=all");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+    </style>
+</head>
+<body>
+    <fieldset>
+    <h2>Login</h2>
+    <form onsubmit="handleSubmit(); return false;">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Submit" style="margin-left: 110px;">
+    </form>
+</fieldset>
+</body>
+</html>
